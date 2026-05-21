@@ -239,7 +239,7 @@ export const PRODUCTS: Product[] = [
       cooling: "Cold zone + ambient",
     },
     modal: {
-      image: "/images/machine-standard.jpg",
+      image: "/images/machine-capacity.jpg",
       model: "ZG-CB-N88-S21.5",
       dimensions: "1400 × 830 × 1965 mm",
       packedSize: "1450 × 890 × 1980 mm",
@@ -322,7 +322,7 @@ export const PRODUCTS: Product[] = [
       cooling: "Energy Star certified",
     },
     modal: {
-      image: "/images/machine-standard.jpg",
+      image: "/images/machine-capacity.jpg",
       model: "ZG-EC-N40-S15.6-OUT",
       dimensions: "900 × 700 × 1800 mm",
       packedSize: "950 × 750 × 1850 mm",
