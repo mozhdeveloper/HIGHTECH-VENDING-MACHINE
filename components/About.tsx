@@ -7,6 +7,7 @@ import { PHILOSOPHY_VALUES, ABOUT_TEXT } from "@/data/mockData";
 
 const ICONS = { Factory, Leaf, Headset } as const;
 
+
 export default function About() {
   const [imgErr, setImgErr] = useState(false);
 
