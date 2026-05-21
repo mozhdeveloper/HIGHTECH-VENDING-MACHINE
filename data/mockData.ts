@@ -156,7 +156,7 @@ export const PRODUCTS: Product[] = [
     id: "hv-cool42",
     tag: "Flagship",
     title: "ChillDrink Pro — Refrigeration Beverage Tower",
-    image: "/images/machine-refrigerated.jpg",
+    image: "/images/machine-standard.jpg",
     imagePlaceholder: "ChillDrink Pro",
     specs: {
       capacity: "300–600 bottles/cans",
@@ -230,7 +230,7 @@ export const PRODUCTS: Product[] = [
     id: "hv-combo",
     tag: "Hot Sell",
     title: "Combo Snack & Drink Hybrid Machine",
-    image: "/images/machine-capacity.jpg",
+    image: "/images/machine-standard.jpg",
     imagePlaceholder: "Hybrid Combo 88",
     specs: {
       capacity: "300–880 items",
@@ -313,7 +313,7 @@ export const PRODUCTS: Product[] = [
     id: "hv-eco",
     tag: "Eco",
     title: "EcoSmart Compact Outdoor Machine",
-    image: "/images/machine-capacity.jpg",
+    image: "/images/machine-standard.jpg",
     imagePlaceholder: "EcoSmart Outdoor",
     specs: {
       capacity: "300–320 items",

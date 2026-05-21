@@ -63,16 +63,6 @@ function MachinePlaceholder({
         {/* Screen */}
         <div className="mx-2 mt-2 rounded-md border overflow-hidden relative"
           style={{ height: 56, background: "#040d1e", borderColor: `${accent}44` }}>
-          {/* Product image preview inside screen */}
-          <Image
-            src={product.image}
-            alt={product.title}
-            fill
-            className="object-contain p-1"
-            onError={(e) => {
-              (e.target as HTMLImageElement).style.display = "none";
-            }}
-          />
           <div className="absolute inset-0"
             style={{ background: `linear-gradient(135deg, ${accent}22, transparent)` }} />
           <div className="relative h-full flex flex-col items-center justify-center px-1">
@@ -158,27 +148,22 @@ export default function Hero() {
           src="/images/hero-banner.jpg"
           alt="HIGHTECH Vending Machines"
           fill
-          className="object-cover object-center"
+          className="object-cover"
+          style={{ objectPosition: "50% 75%" }}
           priority
           onError={(e) => {
             (e.target as HTMLImageElement).style.display = "none";
           }}
         />
-        {/* Dark overlay for text readability (doubles as background when no image) */}
+        {/* Dark overlay — heavy at top/bottom for text, lighter in center to reveal machines */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(11,22,64,0.92) 0%, rgba(13,30,90,0.82) 35%, rgba(26,46,122,0.72) 60%, rgba(15,31,86,0.90) 100%)",
+              "linear-gradient(180deg, rgba(5,12,45,0.94) 0%, rgba(5,12,45,0.78) 30%, rgba(5,12,45,0.58) 55%, rgba(5,12,45,0.90) 100%)",
           }}
         />
       </div>
-      {/* Atmospheric top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full opacity-25 blur-3xl"
-        style={{ background: "radial-gradient(ellipse, #818cf8 0%, #3b82f6 50%, transparent 80%)" }} />
-      {/* Horizon glow */}
-      <div className="absolute bottom-[30%] left-0 right-0 h-32 opacity-20"
-        style={{ background: "linear-gradient(to top, #7c3aed33, transparent)" }} />
       {/* Ground */}
       <div className="absolute bottom-0 left-0 right-0 h-36"
         style={{ background: "linear-gradient(to top, #030818, #0b1640aa, transparent)" }} />
