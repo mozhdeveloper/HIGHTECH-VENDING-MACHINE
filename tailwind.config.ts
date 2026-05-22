@@ -21,11 +21,16 @@ const config: Config = {
       animation: {
         "fade-up": "fadeUp 0.6s ease-out both",
         "pulse-soft": "pulseSoft 3s ease-in-out infinite",
+        "zoom-in": "zoomIn 20s ease-out forwards",
       },
       keyframes: {
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(12px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        zoomIn: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(1.07)" },
         },
         pulseSoft: {
           "0%, 100%": { opacity: "0.6" },

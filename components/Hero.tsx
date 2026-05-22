@@ -14,7 +14,7 @@ export default function Hero() {
           alt="HIGHTECH Vending Machine — OEM/ODM Vending Machines Solution Provider"
           width={1920}
           height={640}
-          className="w-full h-auto block"
+          className="w-full h-auto block animate-zoom-in"
           priority
           onError={(e) => {
             const el = e.target as HTMLImageElement;
