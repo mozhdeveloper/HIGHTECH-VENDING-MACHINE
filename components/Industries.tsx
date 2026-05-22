@@ -32,7 +32,7 @@ export default function Industries() {
     <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
+          <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase">
             Target Industries
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -50,9 +50,9 @@ export default function Industries() {
             return (
               <div
                 key={i.label}
-                className="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-slate-100 bg-white hover:bg-blue-600 hover:border-blue-600 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                className="group flex flex-col items-center gap-3 p-6 rounded-2xl border border-slate-100 bg-white hover:bg-slate-900 hover:border-slate-900 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
-                <span className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 group-hover:bg-white/15 group-hover:text-white transition-colors">
+                <span className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-blue-50 text-slate-900 group-hover:bg-white/15 group-hover:text-white transition-colors">
                   <Icon className="w-6 h-6" />
                 </span>
                 <span className="text-sm font-semibold text-slate-800 group-hover:text-white">

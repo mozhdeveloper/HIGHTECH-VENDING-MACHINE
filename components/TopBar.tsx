@@ -31,7 +31,7 @@ export default function TopBar() {
                 key={s.name}
                 href={s.href}
                 aria-label={s.name}
-                className="text-slate-500 hover:text-blue-600 transition-colors"
+                className="text-slate-500 hover:text-black transition-colors"
               >
                 <Icon className="w-4 h-4" />
               </a>
@@ -40,11 +40,11 @@ export default function TopBar() {
         </div>
         <div className="flex items-center gap-6">
           <span className="inline-flex items-center gap-2">
-            <Phone className="w-3.5 h-3.5 text-blue-600" />
+            <Phone className="w-3.5 h-3.5 text-slate-800" />
             {COMPANY.phone}
           </span>
           <span className="inline-flex items-center gap-2">
-            <Mail className="w-3.5 h-3.5 text-blue-600" />
+            <Mail className="w-3.5 h-3.5 text-slate-800" />
             {COMPANY.email}
           </span>
         </div>

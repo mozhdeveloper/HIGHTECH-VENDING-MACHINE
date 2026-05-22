@@ -40,7 +40,7 @@ export default function SmartTech() {
                   <div className="mt-1 text-xl font-bold text-slate-900">
                     {m.value}
                   </div>
-                  <div className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600">
+                  <div className="mt-1 inline-flex items-center gap-1 text-[11px] font-semibold text-slate-900">
                     <TrendingUp className="w-3 h-3" />
                     {m.trend}
                   </div>
@@ -68,7 +68,7 @@ export default function SmartTech() {
 
         {/* Tech feature list */}
         <div>
-          <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
+          <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase">
             Smart Technology
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -88,7 +88,7 @@ export default function SmartTech() {
                   key={f.title}
                   className="flex gap-4 p-5 rounded-2xl border border-slate-100 hover:border-blue-200 hover:bg-slate-50/70 transition-all"
                 >
-                  <span className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-blue-600 text-white">
+                  <span className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-slate-900 text-white">
                     <Icon className="w-5 h-5" />
                   </span>
                   <div>

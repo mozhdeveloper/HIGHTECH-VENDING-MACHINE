@@ -47,7 +47,7 @@ export default function FloatingChat() {
               href={`tel:${COMPANY.phone}`}
               className="flex items-center gap-3 p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition-colors"
             >
-              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-blue-600 text-white">
+              <span className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-slate-900 text-white">
                 <Phone className="w-4 h-4" />
               </span>
               <div>

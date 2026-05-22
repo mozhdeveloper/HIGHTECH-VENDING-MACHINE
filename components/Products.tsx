@@ -16,7 +16,7 @@ const TABS: Array<{ key: "all" | Product["tag"]; label: string }> = [
 
 const TAG_STYLES: Record<Product["tag"], string> = {
   "Hot Sell": "bg-red-50 text-red-600",
-  Flagship: "bg-blue-50 text-blue-600",
+  Flagship: "bg-blue-50 text-slate-900",
   New: "bg-emerald-50 text-emerald-600",
   Eco: "bg-lime-50 text-lime-700",
 };
@@ -32,7 +32,7 @@ export default function Products() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="max-w-2xl">
-            <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
+            <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase">
               Vending Solutions
             </span>
             <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -47,7 +47,7 @@ export default function Products() {
                 className={`px-4 py-2 rounded-full text-sm font-semibold transition-all ${
                   active === t.key
                     ? "bg-slate-900 text-white"
-                    : "bg-white text-slate-600 border border-slate-200 hover:border-blue-600 hover:text-blue-600"
+                    : "bg-white text-slate-600 border border-slate-200 hover:border-slate-900 hover:text-slate-900"
                 }`}
               >
                 {t.label}
@@ -85,36 +85,36 @@ export default function Products() {
                   {p.tag}
                 </span>
                 {/* "View Details" hover overlay */}
-                <div className="absolute inset-0 bg-blue-600/0 group-hover:bg-blue-600/10 transition-colors z-10 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100">
-                  <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-colors z-10 flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100">
+                  <span className="bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
                     View Details
                   </span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-lg font-bold text-slate-900 group-hover:text-black transition-colors">
                   {p.title}
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">
                   <li className="flex items-center gap-2">
-                    <Package className="w-4 h-4 text-blue-600 shrink-0" />
+                    <Package className="w-4 h-4 text-slate-900 shrink-0" />
                     Capacity: {p.specs.capacity}
                   </li>
                   <li className="flex items-center gap-2">
-                    <Monitor className="w-4 h-4 text-blue-600 shrink-0" />
+                    <Monitor className="w-4 h-4 text-slate-900 shrink-0" />
                     Screen: {p.specs.screen}
                   </li>
                   <li className="flex items-center gap-2">
-                    <CreditCard className="w-4 h-4 text-blue-600 shrink-0" />
+                    <CreditCard className="w-4 h-4 text-slate-900 shrink-0" />
                     Payment: {p.specs.payment}
                   </li>
                   <li className="flex items-center gap-2">
-                    <Snowflake className="w-4 h-4 text-blue-600 shrink-0" />
+                    <Snowflake className="w-4 h-4 text-slate-900 shrink-0" />
                     Cooling: {p.specs.cooling}
                   </li>
                 </ul>
                 <button
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 group-hover:gap-2.5 transition-all"
+                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 group-hover:gap-2.5 transition-all"
                 >
                   View Full Specs
                   <ArrowRight className="w-4 h-4" />

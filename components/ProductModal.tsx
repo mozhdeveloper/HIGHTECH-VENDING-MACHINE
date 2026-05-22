@@ -149,7 +149,7 @@ export default function ProductModal({
                   className="p-3 rounded-xl bg-slate-50 border border-slate-100"
                 >
                   <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                    <s.icon className="w-3.5 h-3.5 text-blue-600" />
+                    <s.icon className="w-3.5 h-3.5 text-slate-900" />
                     {s.label}
                   </div>
                   <div className="mt-1 text-sm font-semibold text-slate-900 leading-snug">
@@ -162,7 +162,7 @@ export default function ProductModal({
             {/* Feature badges */}
             <div>
               <div className="flex items-center gap-2 mb-2">
-                <Shield className="w-4 h-4 text-blue-600" />
+                <Shield className="w-4 h-4 text-slate-900" />
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Key Features
                 </span>
@@ -183,7 +183,7 @@ export default function ProductModal({
             {/* Full spec table */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <Cpu className="w-4 h-4 text-blue-600" />
+                <Cpu className="w-4 h-4 text-slate-900" />
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Product Specifications
                 </span>
@@ -196,7 +196,7 @@ export default function ProductModal({
                       i % 2 === 0 ? "bg-slate-50" : "bg-white"
                     }`}
                   >
-                    <row.icon className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+                    <row.icon className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
                     <span className="w-40 shrink-0 text-slate-500 font-medium">
                       {row.label}
                     </span>
@@ -211,7 +211,7 @@ export default function ProductModal({
             {/* Payment Methods */}
             <div>
               <div className="flex items-center gap-2 mb-3">
-                <CreditCard className="w-4 h-4 text-blue-600" />
+                <CreditCard className="w-4 h-4 text-slate-900" />
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-600">
                   Payment Methods
                 </span>
@@ -225,7 +225,7 @@ export default function ProductModal({
                       className="rounded-xl border border-slate-100 p-3 bg-slate-50"
                     >
                       <div className="flex items-center gap-2 mb-1">
-                        <Icon className="w-3.5 h-3.5 text-blue-600" />
+                        <Icon className="w-3.5 h-3.5 text-slate-900" />
                         <span className="text-[11px] font-black uppercase tracking-wider text-blue-700">
                           {pc.category}
                         </span>
@@ -264,7 +264,7 @@ export default function ProductModal({
             <a
               href="#contact"
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 text-sm font-semibold text-slate-700 hover:border-blue-600 hover:text-blue-600 bg-white transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-300 text-sm font-semibold text-slate-700 hover:border-slate-900 hover:text-slate-900 bg-white transition-all"
             >
               <Download className="w-4 h-4" />
               Request Spec Sheet
@@ -272,7 +272,7 @@ export default function ProductModal({
             <a
               href="#contact"
               onClick={onClose}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition-all"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-semibold hover:bg-blue-700 transition-all"
             >
               <MessageCircle className="w-4 h-4" />
               Get a Quote

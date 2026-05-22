@@ -56,7 +56,7 @@ export default function FeaturedStrip() {
 
                 {/* ── Title ── */}
                 <div className="px-5 mt-1 mb-4 text-center">
-                  <h3 className="text-[13px] text-slate-600 font-medium truncate group-hover:text-blue-600 transition-colors uppercase">
+                  <h3 className="text-[13px] text-slate-600 font-medium truncate group-hover:text-slate-900 transition-colors uppercase">
                     {product.title}
                   </h3>
                 </div>

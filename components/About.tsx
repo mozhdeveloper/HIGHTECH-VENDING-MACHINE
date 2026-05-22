@@ -60,7 +60,7 @@ export default function About() {
 
         {/* Text */}
         <div className="order-1 lg:order-2">
-          <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
+          <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase">
             About HIGHTECH
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -72,11 +72,11 @@ export default function About() {
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 p-5 rounded-2xl bg-blue-50 border border-blue-100">
             <div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600">Our Vision</div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-900">Our Vision</div>
               <p className="mt-1 text-sm text-slate-700 leading-relaxed">{ABOUT_TEXT.vision}</p>
             </div>
             <div>
-              <div className="text-[10px] font-bold uppercase tracking-wider text-blue-600">Our Mission</div>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-900">Our Mission</div>
               <p className="mt-1 text-sm text-slate-700 leading-relaxed">{ABOUT_TEXT.mission}</p>
             </div>
           </div>
@@ -89,7 +89,7 @@ export default function About() {
                   key={v.title}
                   className="flex gap-4 p-4 rounded-xl bg-white border border-slate-100"
                 >
-                  <span className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 text-blue-600">
+                  <span className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-50 text-slate-900">
                     <Icon className="w-5 h-5" />
                   </span>
                   <div>

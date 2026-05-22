@@ -47,7 +47,7 @@ export default function Footer() {
               <li key={l.label}>
                 <a
                   href={l.href}
-                  className="text-slate-600 hover:text-blue-600 transition-colors"
+                  className="text-slate-600 hover:text-slate-900 transition-colors"
                 >
                   {l.label}
                 </a>
@@ -64,7 +64,7 @@ export default function Footer() {
               <li key={i.label}>
                 <a
                   href="#"
-                  className="text-slate-600 hover:text-blue-600 transition-colors"
+                  className="text-slate-600 hover:text-slate-900 transition-colors"
                 >
                   {i.label}
                 </a>
@@ -78,15 +78,15 @@ export default function Footer() {
           <h4 className="font-bold text-slate-900">Corporate Address</h4>
           <ul className="mt-4 space-y-3 text-sm text-slate-600">
             <li className="flex gap-2.5">
-              <MapPin className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
               {COMPANY.address}
             </li>
             <li className="flex gap-2.5">
-              <Phone className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+              <Phone className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
               {COMPANY.phone}
             </li>
             <li className="flex gap-2.5">
-              <Mail className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+              <Mail className="w-4 h-4 text-slate-900 shrink-0 mt-0.5" />
               {COMPANY.email}
             </li>
           </ul>
@@ -96,9 +96,9 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 mt-12 pt-6 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
         <p>© {new Date().getFullYear()} {COMPANY.name}. All rights reserved.</p>
         <div className="flex gap-5">
-          <a href="#" className="hover:text-blue-600">Privacy Policy</a>
-          <a href="#" className="hover:text-blue-600">Terms of Service</a>
-          <a href="#" className="hover:text-blue-600">Cookies</a>
+          <a href="#" className="hover:text-slate-900">Privacy Policy</a>
+          <a href="#" className="hover:text-slate-900">Terms of Service</a>
+          <a href="#" className="hover:text-slate-900">Cookies</a>
         </div>
       </div>
     </footer>

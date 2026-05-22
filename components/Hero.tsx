@@ -58,59 +58,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      {/* ── CTA + Stats strip ── */}
-      <div
-        className="border-t"
-        style={{
-          background: "linear-gradient(180deg, #060e24 0%, #030818 100%)",
-          borderColor: "rgba(255,255,255,0.08)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-5">
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-all shadow-lg"
-            >
-              Get a Smart Solution <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href="#products"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl font-semibold transition-all"
-              style={{
-                border: "1px solid rgba(255,255,255,0.2)",
-                background: "rgba(255,255,255,0.06)",
-                color: "#fff",
-              }}
-            >
-              <PlayCircle className="w-5 h-5" /> View Products
-            </a>
-          </div>
-
-          {/* Stats */}
-          <div
-            className="flex items-center gap-8 text-sm"
-            style={{ color: "rgba(255,255,255,0.5)" }}
-          >
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">500+</div>
-              <div>Global Clients</div>
-            </div>
-            <div className="w-px h-10" style={{ background: "rgba(255,255,255,0.15)" }} />
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">40+</div>
-              <div>Countries</div>
-            </div>
-            <div className="w-px h-10" style={{ background: "rgba(255,255,255,0.15)" }} />
-            <div className="text-center">
-              <div className="text-2xl font-bold text-white">99.8%</div>
-              <div>Uptime</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 }

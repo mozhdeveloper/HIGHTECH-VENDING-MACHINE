@@ -12,7 +12,7 @@ export default function FaqNews() {
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12">
         {/* News */}
         <div>
-          <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
+          <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase">
             Knowledge Center
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -35,11 +35,11 @@ export default function FaqNews() {
                       <Calendar className="w-3.5 h-3.5" />
                       {n.date}
                     </div>
-                    <div className="mt-1.5 font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    <div className="mt-1.5 font-bold text-slate-900 group-hover:text-slate-900 transition-colors">
                       {n.title}
                     </div>
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 shrink-0 mt-1" />
+                  <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-slate-900 shrink-0 mt-1" />
                 </a>
               </li>
             ))}
@@ -48,7 +48,7 @@ export default function FaqNews() {
 
         {/* FAQ */}
         <div>
-          <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase">
+          <span className="text-sm font-semibold tracking-wider text-slate-900 uppercase">
             FAQ
           </span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
@@ -78,7 +78,7 @@ export default function FaqNews() {
                     <span
                       className={`shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full transition-colors ${
                         isOpen
-                          ? "bg-blue-600 text-white"
+                          ? "bg-slate-900 text-white"
                           : "bg-slate-100 text-slate-600"
                       }`}
                     >
