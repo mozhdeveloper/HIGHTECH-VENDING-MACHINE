@@ -9,12 +9,14 @@ export default function Hero() {
     <section id="home" className="bg-[#030818]">
       {/* ── Full-width banner image ── */}
       <div className="relative w-full overflow-hidden">
+        {/* Wrapper div carries the zoom animation so overflow-hidden clips it properly */}
+        <div className="animate-zoom-in origin-center">
         <Image
           src="/images/hero-banner-v2.jpg"
           alt="HIGHTECH Vending Machine — OEM/ODM Vending Machines Solution Provider"
           width={1920}
           height={640}
-          className="w-full h-auto block animate-zoom-in"
+          className="w-full h-auto block"
           priority
           onError={(e) => {
             const el = e.target as HTMLImageElement;
@@ -23,6 +25,7 @@ export default function Hero() {
             if (fallback) fallback.style.display = "flex";
           }}
         />
+        </div>
 
         {/* Fallback banner — shows only when image fails to load */}
         <div
