@@ -21,15 +21,36 @@ export async function POST(req: Request) {
   }
 
   // --- Transporter ---
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT ?? 465),
-    secure: Number(process.env.SMTP_PORT ?? 465) === 465,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
+  // In development, use Ethereal (fake SMTP) since residential ISPs block outbound SMTP ports.
+  // In production (Vercel), use the real GreenGeeks SMTP credentials from env vars.
+  let transporter: nodemailer.Transporter;
+  let previewUrl: string | false = false;
+  let recipientAddress: string;
+
+  if (process.env.NODE_ENV !== "production") {
+    const testAccount = await nodemailer.createTestAccount();
+    recipientAddress = testAccount.user;   // Ethereal captures it in its own inbox
+    transporter = nodemailer.createTransport({
+      host: "smtp.ethereal.email",
+      port: 587,
+      secure: false,
+      auth: { user: testAccount.user, pass: testAccount.pass },
+    });
+  } else {
+    recipientAddress = process.env.SMTP_USER!;
+    const port = Number(process.env.SMTP_PORT ?? 587);
+    transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port,
+      secure: port === 465,
+      requireTLS: port === 587,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+      tls: { rejectUnauthorized: false },
+    });
+  }
 
   const html = `
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
@@ -50,16 +71,29 @@ export async function POST(req: Request) {
     </div>
   `;
 
+  const fromAddress =
+    process.env.NODE_ENV !== "production"
+      ? undefined                          // Ethereal fills this automatically
+      : `"HIGHTECH Contact Form" <${process.env.SMTP_USER}>`;
+
   try {
-    await transporter.sendMail({
-      from: `"HIGHTECH Contact Form" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_USER,         // receives at the same mailbox
-      replyTo: email,                    // reply goes straight back to the lead
+    const info = await transporter.sendMail({
+      from: fromAddress,
+      to: recipientAddress,
+      replyTo: email,
       subject: `New Inquiry from ${name}${interest ? ` — ${interest}` : ""}`,
       html,
     });
 
-    return NextResponse.json({ success: true });
+    if (process.env.NODE_ENV !== "production") {
+      previewUrl = nodemailer.getTestMessageUrl(info);
+      console.log("📧 Ethereal preview URL:", previewUrl);
+    }
+
+    return NextResponse.json({
+      success: true,
+      ...(previewUrl ? { previewUrl } : {}),
+    });
   } catch (err) {
     console.error("SMTP error:", err);
     return NextResponse.json(
