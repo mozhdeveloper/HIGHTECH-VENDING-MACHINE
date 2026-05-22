@@ -38,11 +38,12 @@ export async function POST(req: Request) {
     });
   } else {
     recipientAddress = process.env.SMTP_USER!;
-    const port = Number(process.env.SMTP_PORT ?? 465);
+    const port = Number(process.env.SMTP_PORT ?? 587);
     transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port,
-      secure: port === 465,
+      secure: false,
+      requireTLS: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
