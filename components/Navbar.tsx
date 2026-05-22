@@ -40,7 +40,7 @@ export default function Navbar() {
                 alt={COMPANY.name}
                 fill
                 className="object-contain object-left"
-                style={{ filter: "brightness(0) invert(1)" }}
+                style={{ filter: "invert(1)", mixBlendMode: "screen" }}
                 priority
                 onError={() => setLogoErr(true)}
               />
