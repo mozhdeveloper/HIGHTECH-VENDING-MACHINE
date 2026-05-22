@@ -1,6 +1,7 @@
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import FeaturedStrip from "@/components/FeaturedStrip";
 import Expertise from "@/components/Expertise";
 import Products from "@/components/Products";
 import SmartTech from "@/components/SmartTech";
@@ -17,6 +18,7 @@ export default function Home() {
       <TopBar />
       <Navbar />
       <Hero />
+      <FeaturedStrip />
       <Expertise />
       <Products />
       <SmartTech />
