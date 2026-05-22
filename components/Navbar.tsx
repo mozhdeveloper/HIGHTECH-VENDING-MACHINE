@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X, Zap } from "lucide-react";
 import { NAV_LINKS, COMPANY } from "@/data/mockData";
@@ -8,9 +8,20 @@ import { NAV_LINKS, COMPANY } from "@/data/mockData";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [logoErr, setLogoErr] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0a0f1d] border-b border-slate-800">
+    <header 
+      className={`sticky top-0 z-40 transition-all duration-300 ${
+        scrolled ? "bg-[#0a0f1d]/85 backdrop-blur-md border-b border-white/10" : "bg-[#0a0f1d] border-b border-transparent"
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-6 h-18 py-4 flex items-center justify-between">
         <a href="#home" className="flex items-center gap-2 group">
           {logoErr ? (
@@ -28,7 +39,8 @@ export default function Navbar() {
                 src="/images/logo.png"
                 alt={COMPANY.name}
                 fill
-                className="object-contain object-left filter invert brightness-0 invert"
+                className="object-contain object-left"
+                style={{ filter: "brightness(0) invert(1)" }}
                 priority
                 onError={() => setLogoErr(true)}
               />
