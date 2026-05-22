@@ -37,7 +37,7 @@ export async function POST(req: Request) {
       auth: { user: testAccount.user, pass: testAccount.pass },
     });
   } else {
-    recipientAddress = process.env.SMTP_USER!;
+    recipientAddress = process.env.CONTACT_EMAIL ?? process.env.SMTP_USER!;
     const port = Number(process.env.SMTP_PORT ?? 587);
     transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
