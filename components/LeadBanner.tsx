@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function LeadBanner() {
   return (
-    <section id="contact" className="py-16 lg:py-20 bg-white">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-600 p-10 lg:p-14">
           <div className="absolute inset-0 bg-grid-light [background-size:36px_36px] opacity-10" />

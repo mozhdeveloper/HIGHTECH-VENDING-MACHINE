@@ -8,6 +8,7 @@ import SmartTech from "@/components/SmartTech";
 import About from "@/components/About";
 import Industries from "@/components/Industries";
 import LeadBanner from "@/components/LeadBanner";
+import Contact from "@/components/Contact";
 import FaqNews from "@/components/FaqNews";
 import Footer from "@/components/Footer";
 import FloatingChat from "@/components/FloatingChat";
@@ -25,6 +26,7 @@ export default function Home() {
       <About />
       <Industries />
       <LeadBanner />
+      <Contact />
       <FaqNews />
       <Footer />
       <FloatingChat />
