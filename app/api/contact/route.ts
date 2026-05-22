@@ -93,10 +93,15 @@ export async function POST(req: Request) {
       success: true,
       ...(previewUrl ? { previewUrl } : {}),
     });
-  } catch (err) {
+  } catch (err: unknown) {
+    const e = err as { code?: string; message?: string; command?: string };
     console.error("SMTP error:", err);
+    // TODO: remove debug fields before final launch
     return NextResponse.json(
-      { error: "Failed to send message. Please try again later." },
+      {
+        error: "Failed to send message. Please try again later.",
+        _debug: { code: e.code, message: e.message, command: e.command },
+      },
       { status: 500 }
     );
   }
